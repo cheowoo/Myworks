@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>삼성전자 예측 결과</title>
+</head>
+<body>
+    <h1>삼성전자 14일 주가 예측 (LSTM)</h1>
+    <p>최근 60일 데이터를 기반으로 14일 후 종가를 예측합니다.</p>
+    
+    <h2>예측 시계열</h2>
+    <img src="data:image/png;base64,{{ pred_chart }}" alt="Prediction Chart">
+
+    <h2>박스플롯 (OHLC)</h2>
+    <img src="data:image/png;base64,{{ box_chart }}" alt="Box Plot">
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선수정보출력</title>
+</head>
+<style>
+    table,th,td{
+        border: 1px solid black
+    }
+</style>
+<body>
+    <table>
+        <tr>
+
+            <th>선수 이름</th>
+            <th>선수 키</th>
+            <th>선수 몸무게</th>
+        </tr>
+        {% for row in result_table %}
+        <tr>
+            <td>{{row.player_name}}</td>
+            <td>{{row.HEIGHT}}</td>
+            <td>{{row.WEIGHT}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    
+</body>
+</html>
