@@ -1,0 +1,3 @@
+
+ github 키
+git remote add origin https://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@github.com/beomjoon-kim/git_study01.git
