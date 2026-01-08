@@ -1,0 +1,26 @@
+<html>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> <!-- Jquery 라이브러리 선언-->
+        <script>
+        function test(){
+                var text_data = $('#TextID').val(); // TextID라는 id를 가진 요소의 값을 가져온다.
+                $.ajax({
+                        type : 'POST',                              // GET POST 둘중 하나 선택
+                        url : 'http://localhost:5000/jquery_test',
+                        data : {
+                               TextID:text_data,
+                        },
+                        success : function(result){
+                            alert(result);
+                        },
+                        error : function(xtr,status,error){ // 실패시
+                                alert(xtr +":"+status+":"+error);
+                        }
+                });
+        }
+        </script>
+        <body>
+                <p> 텍스트를입력해주세요.</p>
+                <input type = "text" name="TextID" id="TextID"/>
+                <input type = "button" value = "jQuery실행" onclick="test()"/>
+        </body>
+</html>
